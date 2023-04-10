@@ -1,0 +1,237 @@
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    color: var(--dark);
+  }
+  
+  body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+  }
+  
+  .btn {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+  }
+
+  .readmore {
+    color: #333;
+    background: var(--light);
+    padding: 1rem 1.8rem;
+  }
+  
+  .learnmore {
+    padding: 1rem 1.8rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  /*Navigation*/
+  .nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .nav a {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .nav a:hover {
+    background: var(--dark);
+    color: var(--light);
+  }
+  
+  /* Container */
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      'showcase showcase top-box-a'
+      'showcase showcase top-box-b';
+  }
+  
+  /* Showcase */
+  .showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+  }
+  
+  .showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+  }
+  
+  /* Box */
+  .top-box {
+    background: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+  }
+  
+  .top-box .price {
+    font-size: 2.5rem;
+  }
+  
+  .top-box1 {
+    grid-area: top-box-a;
+  }
+  
+  .top-box2 {
+    grid-area: top-box-b;
+  }
+
+  .psize {
+    font-size: 20px;
+  }
+  
+  /* Boxes */
+  .boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .box {
+    background: var(--primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Information */
+  .textimg{
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    padding: 3rem;
+  }
+
+  .fsize {
+    font-size: 25px;
+  }
+  .hsize {
+   font-size: 30px;
+  }
+  
+  /*Random Images */
+  .images {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .images img {
+    width: 100%;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 2rem;
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Media */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-areas:
+        'showcase showcase'
+        'top-box1 top-box2';
+    }
+  
+    .showcase h1 {
+      font-size: 2.5rem;
+    }
+  
+    .nav ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .textimg {
+      grid-template-columns: 1fr;
+    }
+  
+    .textimg .btn {
+      display: block;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+      grid-template-areas:
+        'showcase'
+        'top-box1'
+        'top-box2';
+    }
+  }
+
+/*Icons*/
+.icon-pie-chart {
+    width: 20%;
+    height: 20%;
+}
+
+/*For The Visually Impared*/
+.button {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.icon-eye {
+  font-size: 1.7rem;
+}
